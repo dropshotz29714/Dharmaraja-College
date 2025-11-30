@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dharmaraja College — Event Hub</title>
+  <meta name="description" content="Announcements, events, calendar, tickets, RSVPs, and role-based dashboards." />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.26/bundled/lenis.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/fuse.js@7"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/timezone.js"></script>
+  <script defer src="assets/app.js"></script>
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="index.html"><span class="logo"></span> Dharmaraja College</a>
+  <div class="links">
+    <a href="announcements.html"><i class="fa-regular fa-newspaper"></i> Announcements</a>
+    <a href="events.html"><i class="fa-regular fa-calendar"></i> Events</a>
+    <a href="calendar.html"><i class="fa-regular fa-calendar-days"></i> Calendar</a>
+    <a href="gallery.html"><i class="fa-regular fa-images"></i> Gallery</a>
+    <a href="enquiry.html" class="pill"><i class="fa-regular fa-envelope"></i> Enquiry</a>
+    <div class="menu">
+      <button class="btn-ghost"><i class="fa-solid fa-users-gear"></i></button>
+      <div class="menu-pop">
+        <strong class="muted" style="padding:6px 10px;display:block">Roles</strong>
+        <a href="parents.html"><i class="fa-solid fa-user-group"></i> Parents</a>
+        <a href="students.html"><i class="fa-solid fa-user-graduate"></i> Students</a>
+        <a href="teachers.html"><i class="fa-solid fa-chalkboard-user"></i> Teachers</a>
+        <hr style="border-color:rgba(255,255,255,.1)">
+        <a href="admin.html"><i class="fa-solid fa-shield-halved"></i> Admin</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<section class="container">
+  <h1 class="reveal">Gallery</h1>
+  <p class="lead reveal">A simple, fast lightbox gallery (works offline).</p>
+  <div id="gallery" class="gallery reveal"></div>
+  <div id="lightbox" class="lightbox"><img id="lightbox-img" src="" alt=""></div>
+</section>
+
+
+
+</main>
+
+<footer class="footer">
+  <div class="fgrid">
+    <div><div class="brand mini"><span class="logo"></span> Rajans</div>
+      <p class="muted">Role-based portal with animations, calendar, and offline-friendly content.</p>
+    </div>
+    <div>
+      <strong>Explore</strong>
+      <a href="announcements.html">Announcements</a>
+      <a href="events.html">Events</a>
+      <a href="calendar.html">Calendar</a>
+    </div>
+    <div>
+      <strong>Roles</strong>
+      <a href="parents.html">Parents</a>
+      <a href="students.html">Students</a>
+      <a href="teachers.html">Teachers</a>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <a href="mailto:admin@example.com">admin@example.com</a>
+      <span class="muted">Kandy • Sri Lanka</span>
+    </div>
+  </div>
+  <div class="copy">© <span id="year"></span> Dharmaraja College</div>
+</footer>
+
+</body>
+</html>
