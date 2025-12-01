@@ -4,7 +4,7 @@
   --radius:22px;
 }
 *{box-sizing:border-box}
-html,body{height:100%background:
+html,body{height:100%
     radial-gradient(900px 400px at 80% -10%, rgba(86,204,242,.22), transparent 60%),
     radial-gradient(800px 400px at -10% 10%, rgba(255,209,102,.18), transparent 60%),
     var(--bg);
