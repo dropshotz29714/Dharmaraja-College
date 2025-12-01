@@ -131,7 +131,7 @@ main{flex:1}
 
 /* BGFIX: footer blends with page background, no image seams */
 .footer{ background: transparent !important; }
-.footer::before{ content:''; display:block; height:1px; width:100%; background:var(--ring); margin-bottom:18px; opacity:.6 }
+
 
 /* Blue parallax sphere */
 .hero::before{
@@ -380,4 +380,41 @@ header, .site-header, .topbar, .nav, .navbar {
 .visual-box .interactive, .drc-media-wrap .interactive {
   pointer-events: auto !important;
   z-index: 20 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo {
+  /* 1. Specify the image path using the url() function */
+  background-image: url('DRC_LOGO.png'); 
+
+  /* 2. Crucial: Define the dimensions (since background images don't resize the element) */
+  width: 50px; 
+  height: 50px; 
+
+  /* 3. Control how the image is displayed within the element */
+  background-size: contain; /* Ensures the entire image is visible, scaling it down if necessary */
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: center; /* Centers the image within the container */
+
+  /* Additional styling to make it align with the text */
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
 }
