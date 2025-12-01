@@ -4,12 +4,12 @@
   --radius:22px;
 }
 *{box-sizing:border-box}
-html,body{/* BGFIX gradient */height:100%background:
+html,body{height:100%background:
     radial-gradient(900px 400px at 80% -10%, rgba(86,204,242,.22), transparent 60%),
     radial-gradient(800px 400px at -10% 10%, rgba(255,209,102,.18), transparent 60%),
     var(--bg);
 }
-body{/* BGFIX gradient */
+body{
   margin:0; color:var(--text); 
   font: 400 16px/1.6 Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 background:
@@ -26,7 +26,6 @@ p.lead{font-size: clamp(16px, 2.1vw, 20px); color: var(--muted)}
 input, select, textarea{width:100%; padding:10px 12px; border-radius:12px; border:1px solid var(--ring); background:#0e151f; color:var(--text)}
 label{color:var(--muted)}
 
-/* Nav */
 .nav{justify-content:space-between;position:fixed; inset:16px 16px auto; border:1px solid var(--ring); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
   border-radius:999px; display:flex; align-items:center; gap:16px; padding:10px 16px; z-index:40; backdrop-filter: blur(10px)}
 .brand{display:flex; align-items:center; gap:10px; font-weight:800; text-decoration:none}
@@ -43,18 +42,16 @@ label{color:var(--muted)}
 .menu-pop a{padding:10px 10px; border-radius:10px; text-decoration:none; color:var(--text)}
 .menu-pop a:hover{background: rgba(255,255,255,.06)}
 
-/* Grid + Cards */
 .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:14px}
 .card{background:var(--card); border:1px solid var(--ring); border-radius:22px; box-shadow: 0 20px 60px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.03); padding:20px; position:relative; overflow:hidden}
 .card:hover{transform: translateY(-3px)}
 .badge{display:inline-flex; gap:8px; align-items:center; border:1px solid var(--ring); background: rgba(255,255,255,.06); border-radius:999px; padding:8px 12px; color: var(--muted)}
 
-/* Enhanced cards */
 .card-head{display:flex; align-items:center; gap:12px; margin-bottom:8px}
 .card-head .emblem{width:44px; height:44px; border-radius:14px; background:linear-gradient(135deg, rgba(255,209,102,.35), rgba(86,204,242,.25)); border:1px solid var(--ring); display:grid; place-items:center; font-size:18px}
 .card-title{font-weight:800; font-size:20px; margin:0}
 .card-meta{color:var(--muted); font-size:14px; display:flex; gap:10px; flex-wrap:wrap}
-.card-body{/* BGFIX gradient */margin:8px 0 0background:
+.card-body{margin:8px 0 0background:
     radial-gradient(900px 400px at 80% -10%, rgba(86,204,242,.22), transparent 60%),
     radial-gradient(800px 400px at -10% 10%, rgba(255,209,102,.18), transparent 60%),
     var(--bg);
@@ -63,19 +60,16 @@ label{color:var(--muted)}
 .btn{border:1px solid var(--ring); padding:10px 14px; border-radius:12px; background:rgba(255,255,255,.06); color:var(--text); text-decoration:none; display:inline-flex; align-items:center; gap:8px}
 .btn:hover{transform:translateY(-2px)}
 
-/* Reveal */
 .reveal{transition: opacity .8s ease, transform .8s ease}
 .js .reveal{opacity:0; transform: translateY(28px)}
 .js .reveal.revealed{opacity:1; transform:none}
 
-/* Hero */
 .hero{min-height:100svh; display:grid; place-items:center; overflow:clip}
 .hero-inner{max-width:1200px; width:100%; padding:120px 24px 80px; display:grid; grid-template-columns:1.1fr .9fr; gap:24px}
 .media{position:relative; height:60vh; min-height:420px; border-radius:22px; overflow:hidden; border:1px solid var(--ring); background:linear-gradient(160deg, rgba(86,204,242,.25), rgba(255,209,102,.12))}
 .media::after{content:""; position:absolute; inset:-35% -10% auto; height:120%; background: radial-gradient(420px 200px at 30% 40%, rgba(255,255,255,.45), transparent 60%); filter: blur(30px); mix-blend:overlay; opacity:.5}
 .media .gridlines{position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size:40px 40px}
 
-/* Calendar */
 .cal{display:grid; grid-template-columns:repeat(7,1fr); gap:8px}
 .cal .dow{opacity:.7; color:var(--muted); text-align:center; padding:6px 0}
 .cal .cell{border:1px solid var(--ring); border-radius:14px; min-height:80px; background:rgba(255,255,255,.03); padding:8px; position:relative}
@@ -85,7 +79,6 @@ label{color:var(--muted)}
 .cal .cell .list div{white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .cal .cell.today{outline:2px solid var(--gold); box-shadow: 0 0 0 3px rgba(255,209,102,.25)}
 
-/* Gallery */
 .gallery{display:grid; grid-template-columns:repeat(12,1fr); gap:10px}
 .gallery a{grid-column:span 4; border-radius:16px; overflow:hidden; border:1px solid var(--ring); display:block}
 .gallery img{width:100%; height:230px; object-fit:cover; display:block}
@@ -93,7 +86,6 @@ label{color:var(--muted)}
 .lightbox.open{display:flex}
 .lightbox img{max-width:90vw; max-height:85vh; border-radius:12px; border:1px solid var(--ring)}
 
-/* Modal */
 .modal{position:fixed; inset:0; background:rgba(0,0,0,.6); display:none; align-items:center; justify-content:center; z-index:120}
 .modal.open{display:flex}
 .modal .sheet{background:var(--card); border:1px solid var(--ring); border-radius:18px; padding:18px; width:min(560px, 92vw); box-shadow:0 30px 80px rgba(0,0,0,.5)}
@@ -101,12 +93,10 @@ label{color:var(--muted)}
 .modal .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
 .modal .actions{display:flex; gap:10px; justify-content:flex-end; margin-top:8px}
 
-/* Tables */
 .table{width:100%; border-collapse:collapse}
 .table th, .table td{border:1px solid var(--ring); padding:8px; font-size:14px}
 .table th{background:rgba(255,255,255,.05); text-align:left}
 
-/* Responsive */
 @media (max-width:980px){
   .hero-inner{grid-template-columns:1fr}
   .footer .fgrid{grid-template-columns:1fr 1fr}
@@ -122,18 +112,15 @@ label{color:var(--muted)}
 main{flex:1}
 
 
-/* Footer (from v0) */
 .footer{padding:40px 24px; border-top:1px solid var(--ring); background: linear-gradient(180deg, rgba(255,255,255,.02), transparent)}
 .footer .fgrid{max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1.4fr; gap:20px}
 .footer a{color:var(--muted); text-decoration:none}
 .footer .fgrid{grid-template-columns:1fr 1fr}
 .copy{max-width:1200px; margin:12px auto 0; color:#7f93a6; font-size:14px}
 
-/* BGFIX: footer blends with page background, no image seams */
 .footer{ background: transparent !important; }
 
 
-/* Blue parallax sphere */
 .hero::before{
   content:'';
   position:absolute;
@@ -152,7 +139,6 @@ body.scrolled .hero::before{
 }
 .hero{position:relative;overflow:hidden;}
 
-/* Smooth hero bottom blend (ultra subtle) */
 .hero::after{
   content:'';
   position:absolute;
@@ -163,7 +149,6 @@ body.scrolled .hero::before{
 }
 
 
-/* === Grain overlay (cinematic, subtle) === */
 :root { --grain-opacity: .06; --grain-scale: 1.25; }
 body::before {
   content: "";
@@ -175,7 +160,7 @@ body::before {
   background-size: 220px 220px;
   background-repeat: repeat;
   opacity: var(--grain-opacity);
-  mix-blend-mode: normal; /* keep consistent across pages */
+  mix-blend-mode: normal;
   animation: grainShift 14s steps(10) infinite;
   transform: translate3d(0,0,0) scale(var(--grain-scale));
 }
@@ -186,23 +171,19 @@ body::before {
   75%  { background-position: -60px -20px;    transform: translate3d(0.2%, 1%, 0) scale(var(--grain-scale)); }
   100% { background-position: 0 0;            transform: translate3d(0,0,0) scale(var(--grain-scale)); }
 }
-/* Keep main content above the grain */
 main, .nav, footer { position: relative; z-index: 1; }
 
-/* Reduced motion: pause grain animation */
 @media (prefers-reduced-motion: reduce) {
   body::before { animation: none; }
 }
 
 
-/* === RCCS-style grain (film-like, visible, two-layer) === */
 :root {
-  --grain1-opacity: .14;  /* fine grain */
-  --grain2-opacity: .10;  /* coarse grain */
-  --grain1-size: 160px;   /* adjust for finer/coarser look */
+  --grain1-opacity: .14;
+  --grain2-opacity: .10;
+  --grain1-size: 160px;
   --grain2-size: 260px;
 }
-/* Layer 1: fine grain */
 body::before {
   content: "";
   position: fixed;
@@ -217,7 +198,7 @@ body::before {
   animation: grainDrift1 12s steps(12) infinite;
   transform: translate3d(0,0,0);
 }
-/* Layer 2: coarse grain */
+
 body::after {
   content: "";
   position: fixed;
@@ -246,14 +227,12 @@ body::after {
   75%  { background-position:  20px  30px; }
   100% { background-position:   0px   0px; }
 }
-/* Keep main UI above the grain */
 main, .nav, footer { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) {
   body::before, body::after { animation: none; }
 }
 
 
-/* === Scroll progress line === */
 .scroll-line {
   position: fixed;
   top: 0;
@@ -265,7 +244,6 @@ main, .nav, footer { position: relative; z-index: 1; }
   transition: width 0.1s linear;
 }
 
-/* === Custom cursor === */
 .cursor {
   position: fixed;
   top: 0;
@@ -291,18 +269,16 @@ main, .nav, footer { position: relative; z-index: 1; }
 
 
 
-/* === v3.8: Custom vertical scrollbar (modern, gold→blue) === */
 :root{
   --sb-track: rgba(255,255,255,0.06);
-  --sb-thumb: #57c8ef; /* fallback solid for Firefox */
+  --sb-thumb: #57c8ef;
 }
 html{
   scrollbar-gutter: stable;
-  scrollbar-width: thin;                 /* Firefox */
+  scrollbar-width: thin;
   scrollbar-color: var(--sb-thumb) transparent;
 }
 
-/* WebKit-based (Chrome/Edge/Safari) */
 *::-webkit-scrollbar{
   width: 8px;
   height: 8px;
@@ -321,26 +297,23 @@ html{
   filter: brightness(1.1);
 }
 
-/* Ensure the top scroll line does NOT push layout and sits above nav without gaps */
 .scroll-line{
   position: fixed;
   top: 0; left: 0;
   height: 3px;
   width: 0%;
   background: linear-gradient(90deg, #ffd166, #56ccf2);
-  z-index: 10000;              /* above nav */
+  z-index: 10000;
   transition: width 0.1s linear;
   pointer-events: none;
   will-change: width;
 }
 
-/* Remove any potential top margin/padding from body/html that could create a gap */
 html, body{ margin-top: 0 !important; padding-top: 0 !important; }
 
 html, body{ overflow-x: hidden; }
 
 
-/* Injected: DRC GIF overlay (scoped) */
 .drc-media-wrap { position: relative; width:100%; height:100%; border-radius:inherit; overflow:hidden; }
 .drc-media-wrap img#drcGifFallback {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; z-index: 1;
@@ -349,8 +322,6 @@ html, body{ overflow-x: hidden; }
 .drc-media-wrap .gridlines-overlay { pointer-events: none; z-index: 2; }
 
 
-/* ===== Patch: ensure header/roles dropdown sits above media and visual boxes ===== */
-/* Keep this scoped and safe */
 header, .site-header, .topbar, .nav, .navbar {
   position: relative !important;
   z-index: 10000 !important;
@@ -362,13 +333,11 @@ header, .site-header, .topbar, .nav, .navbar {
   pointer-events: auto !important;
 }
 
-/* Visual/media boxes should not steal pointer events */
 .drc-media-wrap, .visual-box, .visual-media, .media {
   z-index: 10 !important;
   pointer-events: none !important;
 }
 
-/* keep overlays non-blocking */
 .drc-media-wrap .gridlines-overlay,
 .visual-box .grid-overlay,
 .media .gridlines,
@@ -376,7 +345,6 @@ header, .site-header, .topbar, .nav, .navbar {
   pointer-events: none !important;
 }
 
-/* If there are interactive elements INSIDE the visual box, explicitly allow them */
 .visual-box .interactive, .drc-media-wrap .interactive {
   pointer-events: auto !important;
   z-index: 20 !important;
@@ -401,20 +369,73 @@ header, .site-header, .topbar, .nav, .navbar {
 
 
 .logo {
-  /* 1. Specify the image path using the url() function */
   background-image: url('DRC_LOGO.png'); 
 
-  /* 2. Crucial: Define the dimensions (since background images don't resize the element) */
   width: 50px; 
   height: 50px; 
 
-  /* 3. Control how the image is displayed within the element */
-  background-size: contain; /* Ensures the entire image is visible, scaling it down if necessary */
-  background-repeat: no-repeat; /* Prevents the image from tiling */
-  background-position: center; /* Centers the image within the container */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
-  /* Additional styling to make it align with the text */
   display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
 }
+
+.dr-footer {  padding:40px 6vw 22px; font-family: Inter, system-ui, sans-serif; }
+.dr-footer-inner { max-width:1200px; margin:0 auto; display:flex; gap:28px; align-items:flex-start; justify-content:space-between; }
+.dr-footer .brand { display:flex; gap:12px; align-items:center; }
+.dr-footer-logo { width:64px; height:64px; object-fit:contain; border-radius:8px; }
+.dr-footer .brand-text h3 { margin:0; font-size:1.05rem; color:#fff; }
+.dr-footer .muted { margin:4px 0 0 0; color:#9fbfc9; font-size:0.9rem; }
+
+.dr-footer .links { display:flex; gap:30px; }
+.dr-footer .col h4 { margin:0 0 8px 0; color:#e9fffb; font-size:0.95rem; }
+.dr-footer .col ul { list-style:none; margin:0; padding:0; color:#bfe6ea; }
+.dr-footer .col ul li { margin:6px 0; }
+.dr-footer a { color:inherit; text-decoration:none; opacity:0.95; }
+.dr-footer a:hover { color:#fff; text-decoration:underline; }
+
+.dr-footer-bottom { max-width:1200px; margin:18px auto 0; display:flex; justify-content:space-between; color:#8fb7bf; font-size:0.9rem; border-top:1px solid rgba(255,255,255,0.03); padding-top:14px; }
+
+
+
+
+
+.dr-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255,255,255,0.25),
+      transparent
+  );
+}
+
+@media(max-width:900px){
+  .dr-footer-inner { flex-direction:column; gap:18px; align-items:flex-start; }
+  .dr-footer .links { flex-wrap:wrap; }
+}
+
+.dr-loader { position: fixed; inset:0; display:flex; align-items:center; justify-content:center; background: radial-gradient(circle at 50% 20%, rgba(0,10,14,0.92), rgba(0,4,6,0.99)); z-index:26000; backdrop-filter: blur(6px) saturate(1.05); transition: opacity .6s cubic-bezier(.2,.9,.32,1), visibility .6s; }
+.dr-loader.hidden { opacity:0; visibility:hidden; pointer-events:none; }
+.dr-loader-inner { text-align:center; color:#dffbff; }
+.dr-loader-logo { width:88px; height:auto; display:block; margin:0 auto 12px;  border-radius:10px;  padding:6px; }
+.dr-loader-text { font-weight:600; color:#cfeff6; margin-bottom:10px; }
+.dr-progress { width:320px; max-width:80vw; height:10px; background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:999px; overflow:hidden; border:1px solid rgba(255,255,255,0.02); }
+.dr-bar { display:block; width:0%; height:100%; background: linear-gradient(90deg,#ffd27a,#5be6ff); transition: width 220ms linear; box-shadow: 0 8px 20px rgba(0,0,0,0.6); border-radius:999px; }
+
+.dr-loader.exit { animation: dr-exit 800ms cubic-bezier(.2,.9,.32,1) both; }
+@keyframes dr-exit {
+  0% { transform: translateY(0) scale(1); opacity:1; filter: blur(0); }
+  50% { transform: translateY(-24px) scale(1.03) rotate(-0.6deg); filter: blur(2px) saturate(1.06); opacity:0.9; }
+  100% { transform: translateY(-120px) scale(1.08) rotate(-1.6deg); filter: blur(14px) saturate(1.12) hue-rotate(10deg); opacity:0; }
+}
+
+body { overflow-y: auto !important; }
